@@ -17,7 +17,7 @@
     var boxheight = 250;
     var ballrad = 10;
     var boxboundx =  boxwidth + boxx - ballrad;
-    var boxbounty = boxheight + boxy - ballrad;
+    var boxboundy = boxheight + boxy - ballrad;
     var inboxboundx = boxx + ballrad;
     var inboxboundy = boxy + ballrad;
     var ballx = 50;
@@ -49,8 +49,9 @@
       var nbally = bally + ballvy;
       
       if (nballx > boxboundx){
-        ballvx = -ballvx;
         nballx = boxboundx;
+        ballvx = -ballvx;
+        
       }
       
       if (nballx < inboxboundx) {
@@ -64,7 +65,7 @@
       }
       if (nbally < inboxboundy){
         nbally = inboxboundy;
-        bally = -ballvy;
+        ballvy = -ballvy;
       }
       ballx = nballx;
       bally = nbally;
